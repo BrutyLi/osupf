@@ -1,0 +1,16 @@
+{% extends 'update/base.html' %}
+
+{% block mainbody %}
+    <div class="row">
+          <div class="col-md-8">
+                        {% for views,jobs in Jview.items %}
+                            <div class="col-md-2">
+                                <h2>{{ views }}</h2>
+                                {% for jobname in jobs %}
+                                    <p><a name="{{ jobname }}" href="#">{{ jobname }}</a></p>
+                                    {% endfor %}
+                            </div>>
+                        {% endfor %}
+          </div>
+    </div>
+{% endblock %}

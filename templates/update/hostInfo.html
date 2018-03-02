@@ -1,0 +1,41 @@
+{% extends 'update/base.html' %}
+{% block mainbody %}
+
+    <div class="row">
+      <div class="col-md-4">
+          <table class="table table-bordered">
+            <tr>
+                <td>名称</td>
+                <td>物理</td>
+                <td>虚拟</td>
+                <td>使用率</td>
+            </tr>
+            <tr>
+                <td>CPU</td>
+                {% for i in c %}
+                    <td>{{ i }}</td>>
+                {% endfor %}
+            </tr>
+            <tr>
+                <td>名称</td>
+                <td>物理内存</td>
+                <td>已使用</td>
+                <td>剩余</td>
+            </tr>
+            <tr>
+                <td>内存</td>
+                {% for i in m %}
+                    <td>{{ i }}</td>>
+                {% endfor %}
+            </tr>
+        </table>
+      <p>系统用户</p>
+      {% for u in huser %}
+        <p>{{ u }}</p>
+      {% endfor %}
+      <p>启动时间:{{ boot }}</p>
+      </div>
+    </div>
+
+
+{% endblock %}
